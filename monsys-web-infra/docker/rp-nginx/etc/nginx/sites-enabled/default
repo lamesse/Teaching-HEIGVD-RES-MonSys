@@ -1,7 +1,8 @@
 upstream web-nodes  {
       ip_hash;
-      server 172.17.0.3:80;
-      server 172.17.0.4:80;
+      server 172.17.0.6:80;
+      server 172.17.0.7:80;
+	  server 172.17.0.8:80;
 }
 
 upstream app-nodes  {
@@ -24,15 +25,13 @@ server {
 	# index index.html index.htm;
 }
 
-# ------------------------------------------------------------------------------------ 
-# If clients send requests to http://res.heig-vd.ch/ (more precisely, if they send a 
-# Host header with a value of "res.heig-vd.ch", then nginx forwards the request to the
-# apache node 
-# ------------------------------------------------------------------------------------ 
+
+
 server {
 	listen 80;
 
-	server_name res.heig-vd.ch;
+	server_name live.clashofclasses.ch;
+
 
 	location / {
     	proxy_pass  http://web-nodes;
@@ -49,17 +48,8 @@ server {
 server {
 	listen 80;
 
-	server_name www.monsys.com;
+	server_name leaderboard.clashofclasses.ch;
 
-	location /ajax/ {
-    	proxy_pass  http://app-nodes;
-     	proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
-		proxy_redirect off;
-     	proxy_buffering off;
-     	proxy_set_header        Host            $host;
-     	proxy_set_header        X-Real-IP       $remote_addr;
-     	proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
-	}
 
 	location / {
     	proxy_pass  http://web-nodes;
