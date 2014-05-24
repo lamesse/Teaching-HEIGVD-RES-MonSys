@@ -33,3 +33,6 @@ monsys-web-infra/docker/web-clash/site-config : ajout de leaderborad.clashofclas
 monsys-web-infra/docker/web-clash/site-content : création de deux répertoires : leaderboard.clashofclasses.ch et live.clashofclasses.ch. Ils contiennent le contenu des deux sites.
 
 monsys-web-infra/docker/rp-nginx/etc/nginx/sites-enables : modification du fichier default. Modification pour faire fonctionner les deux sites.
+
+7. Remarque :
+Nous avons utilisé le port 8014 au lieu du port 80.
