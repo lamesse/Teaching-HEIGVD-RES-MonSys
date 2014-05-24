@@ -315,7 +315,653 @@ What HTTP response did you get?
 
 # -------------------------------
 ```
+# -- YOUR ANSWER TO QUESTION 9 --
+
+What procedure did you follow to validate the configuration of 
+your new web nodes? 
+
+On a fait un telnet depuis la machine virtuelle vers les 3 dockers en utilisant les deux hosts configurés (leaderboard.clashofclasses.ch et live.clashofclasses.ch. On a vérifié que l'on obtenait le bon résultat.
+
+Provide details and evidence (command results, etc.) that your 
+setup is correct.
+
+```
+
+Test sur web-clash-1 - 172.17.0.6
+
+	telnet 172.17.0.6 80
+	GET / HTTP/1.1
+	HOST:live.clashofclasses.ch
+
+	HTTP/1.1 200 OK
+	Date: Sat, 24 May 2014 13:26:44 GMT
+	Server: Apache/2.4.7 (Ubuntu)
+	Last-Modified: Thu, 22 May 2014 19:30:10 GMT
+	ETag: "80a-4fa0224231480"
+	Accept-Ranges: bytes
+	Content-Length: 2058
+	Vary: Accept-Encoding
+	Content-Type: text/html
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/live-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Welcome To Clash of Classes!</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>live</b> section of the website, which is accessible at this U
+	RL <a href="http://live.clashofclasses.ch">http://live.clashofclasses.ch</a>.</p>
+	      <p class="lead">You can jump to the <b>dashboard</b> section of the website <a href="http://dashboard.clashofclass
+	es.ch">here</a>.</p>
+	
+	        <p></p>
+	                <img src="success.jpg" width="300">
+	        <p></p>
+	
+	
+	    </div>
+	
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level Protocols</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
 
 
+	telnet 172.17.0.6 80
+	GET / HTTP/1.1
+	HOST:leaderboard.clashofclasses.ch
+
+	HTTP/1.1 200 OK
+	Date: Sat, 24 May 2014 13:29:12 GMT
+	Server: Apache/2.4.7 (Ubuntu)
+	Last-Modified: Thu, 22 May 2014 19:30:10 GMT
+	ETag: "809-4fa0224231480"
+	Accept-Ranges: bytes
+	Content-Length: 2057
+	Vary: Accept-Encoding
+	Content-Type: text/html
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/dashboard-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Clash of Classes Dashboard</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>dashboard</b> section of the service, which is accessible at t
+	his URL <a href="http://dashboard.clashofclasses.ch">http://dashboard.clashofclasses.ch</a></p>
+	      <p class="lead">You can go back to the <b>live</b> section <a href="http://live.clashofclasses.ch">here</a>.</p>
+	
+	<p></p>
+	        <img src="kid.jpg" width="300">
+	<p></p>
+	
+	
+	
+	    </div>
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level Protocols Teachers</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
+
+Test sur web-clash-2 - 172.17.0.7
+
+	telnet 172.17.0.7 80
+	GET / HTTP/1.1
+	HOST:live.clashofclasses.ch
+	
+	HTTP/1.1 200 OK
+	Date: Sat, 24 May 2014 13:30:44 GMT
+	Server: Apache/2.4.7 (Ubuntu)
+	Last-Modified: Thu, 22 May 2014 19:30:10 GMT
+	ETag: "80a-4fa0224231480"
+	Accept-Ranges: bytes
+	Content-Length: 2058
+	Vary: Accept-Encoding
+	Content-Type: text/html
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/live-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Welcome To Clash of Classes!</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>live</b> section of the website, which is accessible at this U
+	RL <a href="http://live.clashofclasses.ch">http://live.clashofclasses.ch</a>.</p>
+	      <p class="lead">You can jump to the <b>dashboard</b> section of the website <a href="http://dashboard.clashofclass
+	es.ch">here</a>.</p>
+	
+	        <p></p>
+	                <img src="success.jpg" width="300">
+	        <p></p>
+	
+	
+	    </div>
+	
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level Protocols</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>	
+
+	telnet 172.17.0.7 80
+	GET / HTTP/1.1
+	HOST:leaderboard.clashofclasses.ch
+
+	HTTP/1.1 200 OK
+	Date: Sat, 24 May 2014 13:32:03 GMT
+	Server: Apache/2.4.7 (Ubuntu)
+	Last-Modified: Thu, 22 May 2014 19:30:10 GMT
+	ETag: "809-4fa0224231480"
+	Accept-Ranges: bytes
+	Content-Length: 2057
+	Vary: Accept-Encoding
+	Content-Type: text/html
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/dashboard-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Clash of Classes Dashboard</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>dashboard</b> section of the service, which is accessible at t
+	his URL <a href="http://dashboard.clashofclasses.ch">http://dashboard.clashofclasses.ch</a></p>
+	      <p class="lead">You can go back to the <b>live</b> section <a href="http://live.clashofclasses.ch">here</a>.</p>
+	
+	<p></p>
+	        <img src="kid.jpg" width="300">
+	<p></p>
+	
+	
+	
+	    </div>
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level Protocols Teachers</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
+
+Test sur web-clash-3 - 172.17.0.8
+
+	telnet 172.17.0.8 80
+	GET / HTTP/1.1
+	HOST:live.clashofclasses.ch
+
+	HTTP/1.1 200 OK
+	Date: Sat, 24 May 2014 13:32:45 GMT
+	Server: Apache/2.4.7 (Ubuntu)
+	Last-Modified: Thu, 22 May 2014 19:30:10 GMT
+	ETag: "80a-4fa0224231480"
+	Accept-Ranges: bytes
+	Content-Length: 2058
+	Vary: Accept-Encoding
+	Content-Type: text/html
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/live-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Welcome To Clash of Classes!</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>live</b> section of the website, which is accessible at this U
+	RL <a href="http://live.clashofclasses.ch">http://live.clashofclasses.ch</a>.</p>
+	      <p class="lead">You can jump to the <b>dashboard</b> section of the website <a href="http://dashboard.clashofclass
+	es.ch">here</a>.</p>
+	
+	        <p></p>
+	                <img src="success.jpg" width="300">
+	        <p></p>
+	
+	
+	    </div>
+	
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level Protocols</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
+
+	telnet 172.17.0.8 80
+	GET / HTTP/1.1
+	HOST:leaderboard.clashofclasses.ch
+
+	HTTP/1.1 200 OK
+	Date: Sat, 24 May 2014 13:33:13 GMT
+	Server: Apache/2.4.7 (Ubuntu)
+	Last-Modified: Thu, 22 May 2014 19:30:10 GMT
+	ETag: "809-4fa0224231480"
+	Accept-Ranges: bytes
+	Content-Length: 2057
+	Vary: Accept-Encoding
+	Content-Type: text/html
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/dashboard-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Clash of Classes Dashboard</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>dashboard</b> section of the service, which is accessible at t
+	his URL <a href="http://dashboard.clashofclasses.ch">http://dashboard.clashofclasses.ch</a></p>
+	      <p class="lead">You can go back to the <b>live</b> section <a href="http://live.clashofclasses.ch">here</a>.</p>
+	
+	<p></p>
+	        <img src="kid.jpg" width="300">
+	<p></p>
+	
+	
+	
+	    </div>
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level Protocols Teachers</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
 
 
+Nous avons vérifié qu'a chaque fois ce soit le bon contenu qui s'affiche. Nous avons eu les résultats espérés pour les 3 dockers.
+# -------------------------------
+
+# -- YOUR ANSWER TO QUESTION 10 --
+
+What procedure did you follow to validate the configuration of 
+your complete infrastructure?
+
+Nous avons essayé de nous connecter avec un navigateur. Nous avons également fait du telnet.
+
+Provide details and evidence (command results, etc.) that your 
+setup is correct.
+
+Affichage de live.clashofclasses.ch dans un navigateur
+
+![](/img/live.PNG)
+
+Affichage de leaderboard.clashofclasses.ch dans un navigateur
+
+![](/img/leader.PNG)
+
+Telnet :
+	
+	telnet live.clashofclasses.ch 8014
+	GET / HTTP/1.1
+	HOST:live.clashoftclasses.ch
+
+	HTTP/1.1 200 OK
+	Server: nginx/1.6.0
+	Date: Sat, 24 May 2014 15:21:53 GMT
+	Content-Type: text/html
+	Content-Length: 2060
+	Connection: keep-alive
+	Last-Modified: Sat, 24 May 2014 15:16:28 GMT
+	ETag: "80c-4fa26d4848b00"
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-a
+	wesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/live-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js
+	"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queri
+	es -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></s
+	cript>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+	</script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Welcome To Clash of Classes!</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>live</b> section of th
+	e website, which is accessible at this URL <a href="http://live.clashofclasses.c
+	h">http://live.clashofclasses.ch</a>.</p>
+	      <p class="lead">You can jump to the <b>dashboard</b> section of the websit
+	e <a href="http://leaderboard.clashofclasses.ch">here</a>.</p>
+	
+	        <p></p>
+	                <img src="success.jpg" width="300">
+	        <p></p>
+	
+	
+	    </div>
+	
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level P
+	rotocols</p>
+	      </div>
+	    </div>
+	
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
+	
+
+	telnet leaderboard.clashofclasses.ch 8014
+	GET / HTTP/1.1
+	HOST:leaderboard.clashoftclasses.ch
+
+	HTTP/1.1 200 OK
+	Server: nginx/1.6.0
+	Date: Sat, 24 May 2014 15:23:41 GMT
+	Content-Type: text/html
+	Content-Length: 2060
+	Connection: keep-alive
+	Last-Modified: Sat, 24 May 2014 15:16:06 GMT
+	ETag: "80c-4fa26d334d980"
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+	        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-a
+	wesome.css" rel="stylesheet">
+	    <title>Sticky Footer Template for Bootstrap</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="./css/dashboard-bootstrap.css" rel="stylesheet">
+	
+	    <!-- Custom styles for this template -->
+	    <link href="./css/sticky-footer.css" rel="stylesheet">
+	
+	    <!-- Just for debugging purposes. Don't actually copy this line! -->
+	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js
+	"></script><![endif]-->
+	
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queri
+	es -->
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></s
+	cript>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+	</script>
+	    <![endif]-->
+	  </head>
+	
+	  <body>
+	
+	    <!-- Begin page content -->
+	    <div class="container">
+	      <div class="page-header">
+	        <h1>Clash of Classes Dashboard</h1>
+	      </div>
+	      <p class="lead">This is the Welcome Page for the <b>dashboard</b> section
+	of the service, which is accessible at this URL <a href="http://leaderboard.clas
+	hofclasses.ch">http://leaderboard.clashofclasses.ch</a></p>
+	      <p class="lead">You can go back to the <b>live</b> section <a href="http:/
+	/live.clashofclasses.ch">here</a>.</p>
+	
+	<p></p>
+	        <img src="kid.jpg" width="300">
+	<p></p>
+	
+	
+	
+	    </div>
+	
+	    <div id="footer">
+	      <div class="container">
+	        <p class="text-muted">We <i class="fa fa-heart"></i> Application Level P
+	rotocols Teachers</p>
+	      </div>
+	    </div>
+	
+	    <!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	  </body>
+	</html>
+	
+	
+# -------------------------------
