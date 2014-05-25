@@ -1,6 +1,5 @@
 # Answers, Phase 1
 
-```
 # -- INSERT YOUR NAMES HERE -----
 Arnaud Desclouds
 Antoine Messerli
@@ -82,9 +81,9 @@ we have followed.
 	Uploading context
 	2014/05/08 06:43:36 Could not reach any registry endpoint
 
-```
+
 Vagrant provision
-```
+
 
 	$ vagrant provision
 	==> default: Running provisioner: shell...
@@ -129,9 +128,6 @@ Vagrant provision
 # -- YOUR ANSWER TO QUESTION 3 --
 
 # -------------------------------
-```
-vagrant@ubuntu-14:~$ docker images
-```
 
 	vagrant@ubuntu-14:~$ docker images
 	REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
@@ -140,13 +136,10 @@ vagrant@ubuntu-14:~$ docker images
 	heig/rp-nginx       latest              0d9553a2918a        10 hours ago        957 MB
 	dockerfile/ubuntu   latest              1f089cc15e82        3 days ago          584.5 MB
 
-```
+
 # -- YOUR ANSWER TO QUESTION 4 --
 
 # -------------------------------
-```
-vagrant@ubuntu-14:~$ docker ps
-```
 
 	vagrant@ubuntu-14:~$ docker ps
 	CONTAINER ID        IMAGE                    COMMAND                CREATED             STATUS              PORTS
@@ -160,25 +153,16 @@ vagrant@ubuntu-14:~$ docker ps
 	d9ce100be0cd        heig/rp-nginx:latest     /opt/init.sh           10 hours ago        Up 10 hours         0.0.0.0:9090
 	->80/tcp   rp-node
 
-```
+
 # -- YOUR ANSWER TO QUESTION 5 --
 
 # -------------------------------
-```
-web-node-2 : ip : 172.17.0.4
-```
 
-```
-web-node-1 : ip : 172.17.0.3
-```
+	web-node-2 : ip : 172.17.0.4
+	web-node-1 : ip : 172.17.0.3
+	rp-node : ip : 172.17.0.2
+	app-node : ip : 172.17.0.5
 
-```
-rp-node : ip : 172.17.0.2
-```
-
-```
-app-node : ip : 172.17.0.5
-```
 # -- YOUR ANSWER TO QUESTION 6 --
 
 Host (your laptop):
@@ -216,26 +200,20 @@ Docker Container 4 app-node
 - IP address: 172.17.0.5
 
 # -------------------------------
-```
 
-```
 # -- YOUR ANSWER TO QUESTION 7 --
 
 Which command did you type on the terminal to establish the connection?
 
-```
-telnet www.monsys.com 9090
-```
+
+	telnet www.monsys.com 9090
+
 
 What HTTP request did you type and send?
 
-```
-GET / HTTP/1.1
-```
+	GET / HTTP/1.1
+	HOST:www.monsys.com
 
-```
-HOST:www.monsys.com
-```
 
 
 What HTTP response did you get?
@@ -299,22 +277,19 @@ What HTTP response did you get?
 
 Which command did you type on the terminal to establish the connection?
 
-```
-telnet www.monsys.com 7070
-```
+	telnet www.monsys.com 7070
 
 What HTTP request did you type and send?
 
-```
-GET / HTTP/1.1
-```
+
+	GET / HTTP/1.1
 
 What HTTP response did you get?
 
 	[{"name":"P-001","description":"Epson Printer","currentLoadLevel":22.49356652610004},{"name":"P-002","description":"Canon Printer","currentLoadLevel":0.7786028552800417},{"name":"P-003","description":"HP Printer","currentLoadLevel":28.70554516557604}]
 
 # -------------------------------
-```
+
 # -- YOUR ANSWER TO QUESTION 9 --
 
 What procedure did you follow to validate the configuration of 
@@ -325,7 +300,6 @@ On a fait un telnet depuis la machine virtuelle vers les 3 dockers en utilisant 
 Provide details and evidence (command results, etc.) that your 
 setup is correct.
 
-```
 
 Test sur web-clash-1 - 172.17.0.6
 
