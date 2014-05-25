@@ -765,11 +765,11 @@ setup is correct.
 
 Affichage de live.clashofclasses.ch dans un navigateur
 
-![](/img/live.PNG)
+![](/img/live.jpg)
 
 Affichage de leaderboard.clashofclasses.ch dans un navigateur
 
-![](/img/leader.PNG)
+![](/img/leader.jpg)
 
 Telnet :
 	
