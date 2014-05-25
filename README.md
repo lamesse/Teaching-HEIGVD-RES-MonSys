@@ -11,16 +11,21 @@ This repo is used for the Web Infrastructure lab. Fork and clone it.
 3. Contenu du fichier host :
 
 	192.168.33.20	www.monsys.com
+
 	192.168.33.20	live.clashofclasses.ch
+
 	192.168.33.20	leaderboard.clashofclasses.ch 
+
 
 4. Etat des lieux :
 
-Tout fonctionne correctement
+Tout fonctionne correctement, nous sommes arrivés au bout du labo.
 
-5. Capture d'écrant : 
+5. Capture d'écran : 
 
-cf Answers-Phase1
+![](/img/live.jpg)
+
+![](/img/leader.jpg)
 
 6. Fichiers modifiés :
 
@@ -28,11 +33,8 @@ monsys-web-infra/Vagranfile : modification pour avoir trois dockers de plus + ch
 
 monsys-web-infra/docker : ajout d'un dossier web-clash qui est au départ une copie de web-apache
 
-monsys-web-infra/docker/web-clash/site-config : ajout de leaderborad.clashofclasses.ch.conf et de live.clashofclasses.ch. Ces fichiers contiennent les configurations des deux virtual host.
+monsys-web-infra/docker/web-clash/site-config : ajout de leaderboard.clashofclasses.ch.conf et de live.clashofclasses.ch.conf Ces fichiers contiennent les configurations des deux virtual host, utilisés par les les dockers web-clash.
 
 monsys-web-infra/docker/web-clash/site-content : création de deux répertoires : leaderboard.clashofclasses.ch et live.clashofclasses.ch. Ils contiennent le contenu des deux sites.
 
-monsys-web-infra/docker/rp-nginx/etc/nginx/sites-enables : modification du fichier default. Modification pour faire fonctionner les deux sites.
-
-7. Remarque :
-Nous avons utilisé le port 8014 au lieu du port 80.
+monsys-web-infra/docker/rp-nginx/etc/nginx/sites-enables : modification du fichier default, pour faire fonctionner les deux sites supplémentaires.

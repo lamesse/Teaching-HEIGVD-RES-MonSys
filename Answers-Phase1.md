@@ -773,7 +773,7 @@ Affichage de leaderboard.clashofclasses.ch dans un navigateur
 
 Telnet :
 	
-	telnet live.clashofclasses.ch 8014
+	telnet live.clashofclasses.ch 80
 	GET / HTTP/1.1
 	HOST:live.clashoftclasses.ch
 
@@ -855,8 +855,9 @@ Telnet :
 	  </body>
 	</html>
 	
+leaderborad :
 
-	telnet leaderboard.clashofclasses.ch 8014
+	telnet leaderboard.clashofclasses.ch 80
 	GET / HTTP/1.1
 	HOST:leaderboard.clashoftclasses.ch
 
